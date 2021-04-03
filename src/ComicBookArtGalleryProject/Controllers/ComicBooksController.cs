@@ -10,8 +10,13 @@ namespace ComicBookArtGalleryProject.Controllers
 {
 
     //Updating class to inherit from the MVC controller base class
-    public class ComicBooksController: Controller
-    {
-
-    }
+     public class ComicBooksController: Controller
+      {
+        //Action Method.. 
+        public string Detail ()
+        {
+            return "Hello from our Comic Book Controller. Test";
+        }
+      
+      }
 }
