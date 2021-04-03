@@ -8,14 +8,19 @@ using System.Web.Mvc;
 
 namespace ComicBookArtGalleryProject.Controllers
 {
-
     //Updating class to inherit from the MVC controller base class
      public class ComicBooksController: Controller
       {
-        //Action Method.. 
-        public string Detail ()
+        //Action Method: Changed "Content Result" for "Action Result" in order to use the RedirectResult method..
+        public ActionResult Detail()
         {
-            return "Hello from our Comic Book Controller. Test";
+
+            if (DateTime.Today.DayOfWeek == DayOfWeek.Monday)
+            {
+                return Redirect("/");
+            }
+
+            return Content("Hello from our Comic Book Controller");
         }
       
       }
