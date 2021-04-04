@@ -14,8 +14,8 @@ namespace ComicBookArtGalleryProject.Controllers
         //Action Method: Changed "Content Result" for "Action Result" in order to use the RedirectResult method..
         public ActionResult Detail()
         {
-
-            if (DateTime.Today.DayOfWeek == DayOfWeek.Monday)
+            //Rediirect to the root of my website 
+            if (DateTime.Today.DayOfWeek == DayOfWeek.Saturday)
             {
                 return Redirect("/");
             }
